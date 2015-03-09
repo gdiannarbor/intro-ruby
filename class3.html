@@ -63,54 +63,6 @@
           </section>
 
           <section>
-            <h3>HW: grandma.rb</h3>
-            <pre><code contenteditable class="ruby">
-            chatting = true
-            byes = 0
-            while chatting
-              puts "Ask Grandma a question:"
-              said = gets.chomp!
-              if said == "BYE"
-                byes += 1
-                if byes > 2
-                  chatting = false
-                else
-                  puts "** Grandma is ignoring you **"
-                end
-              elsif said == said.upcase
-                year = 1930 + Random.rand(20)
-                puts "NO, NOT SINCE #{year}!"
-              else
-                puts "HUH?!  SPEAK UP, SONNY!"
-              end
-            end
-            puts "Thanks for chatting with Grandma"
-              </code></pre>
-          </section>
-
-          <section>
-            <h3>HW: leap.rb</h3>
-            <pre><code contenteditable class="ruby">
-            puts "Enter a starting year in the format YYYY"
-            starting = gets.chomp!.to_i
-            puts "Enter an ending year in the format YYYY"
-            ending = gets.chomp!.to_i
-            puts "LEAP YEARS between #{starting} and #{ending}"
-
-            starting.upto(ending) do |year|
-              divisible_by_4 = (year % 4) == 0
-              not_divisible_by_100 = (year % 100) != 0
-              divisible_by_400 = (year % 400) == 0
-              is_leap_year = (divisible_by_4 && not_divisible_by_100)
-                               || divisible_by_400
-              if is_leap_year
-                puts "#{year}"
-              end
-            end
-            </code></pre>
-          </section>
-
-          <section>
             <h3>Review</h3>
             <ul class="box--small list--xtall">
               <li class="fragment">Conditions - <code>if</code>, <code>elsif</code>, <code>else</code></li>
